@@ -1,14 +1,16 @@
-function createAnaliticts() {
+import * as $ from 'jquery'
+
+function createAnalytics() {
   let counter = 0;
   let destroyed = false;
 
   const listener = () => counter++;
 
-  document.addEventListener('click', listener);
+  $(document).on('click', listener);
 
   return {
     destroy() {
-      document.removeEventListener('click', listener);
+      $(document).off('click', listener);
       destroyed = true;
     },
 
@@ -21,4 +23,4 @@ function createAnaliticts() {
   }
 }
 
-window.analytics = createAnaliticts();
+window.analytics = createAnalytics();
