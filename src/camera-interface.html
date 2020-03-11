@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Webpack App</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="camera-interface">
+  <div class="camera-interface__camera">
+    <div class="camera__header">
+      <a href="index.html" class="back-to-list">Back<span> to Cameras list</span></a>
+      <span class="camera-name">Camera!</span>
+      <span class="camera-status" id="camera-online-status"></span>&nbsp;
+    </div>
+
+    <div class="camera__video">
+<!--      <Loader @startLiveRtcPlayer="startLiveRtcPlayer"></Loader>-->
+      <div id="loader"></div>
+      <video class="video" id="video"></video>
+      <!--          :poster="`${this.currentCameraSnapshot}`"-->
+    </div>
+
+    <div class="camera__connection-status" id="connection-status"></div>
+    <button id="button">Start player</button>
+
+  </div>
+
+  <div class="camera-interface__debug">
+        <div class="debug-search">
+          <input id="debug-search"
+                 type="search"
+          >
+<!--                 v-model="filterData"-->
+<!--                 @input="filterLog"-->
+        </div>
+
+    <div class="debug-log" id="debug-log">
+      <div class="debug-log__list" id="debug-log-list">
+        <!--        <div class="log-item" v-for="(log, index) in filteredLogs" :key="index">-->
+        <!--          <span>{{log}}</span>-->
+        <!--        </div>-->
+        <br>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
